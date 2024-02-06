@@ -21,17 +21,17 @@ class TrackCell: UITableViewCell {
         // Configure the view for the selected state
         
     }
-    @IBOutlet weak var trackImageView: UIImageView!
-    @IBOutlet weak var artistNameLabel: UILabel!
-    @IBOutlet weak var trackNameLabel: UILabel!    
+    @IBOutlet weak var poster_path: UIImageView!
+    @IBOutlet weak var overview: UILabel!
+    @IBOutlet weak var original_title: UILabel!
     
     /// Configures the cell's UI for the given track.
-    func configure(with track: Track) {
-        trackNameLabel.text = track.trackName
-        artistNameLabel.text = track.artistName
+    func configure(with movies: Movies) {
+        original_title.text = movies.original_title
+        overview.text = movies.overview
 
         // Load image async via Nuke library image loading helper method
-        Nuke.loadImage(with: track.artworkUrl100, into: trackImageView)
+        Nuke.loadImage(with: movies.poster_path, into: poster_path)
     }
     
 }

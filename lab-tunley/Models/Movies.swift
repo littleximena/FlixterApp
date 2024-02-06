@@ -1,49 +1,50 @@
-//
-//  Track.swift
-//  lab-tunley
-//
-//  Created by Charlie Hieger on 12/2/22.
-//
-
 import Foundation
 
 // TODO: Pt 1 - Create a Track model struct
-struct Track {
-    let trackName: String
-    let artistName: String
-    let artworkUrl100: URL
+struct Movies {
+    let original_title: String
+    let overview: String
+    let poster_path: URL
     
     // Detail properties
-    let collectionName: String
-    let primaryGenreName: String
-    let releaseDate: Date
-    let trackTimeMillis: Int}
+    let details: String
+    let popularity: Double
+    let release_Date: Date}
 // TODO: Pt 1 - Create an extension with a mock tracks static var
-extension Track {
+extension Movies {
 
     /// An array of mock tracks
-    static var mockTracks: [Track]  = [
-        Track(trackName: "Ice Cream",
-              artistName: "BLACKPINK & Selena Gomez",
-              artworkUrl100: URL(string:"https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/c3/64/46/c364465f-6271-8aae-93a8-b9979d2befe5/20UMGIM82075.rgb.jpg/100x100bb.jpg")!,
-             collectionName: "The Album",
-             primaryGenreName: "K-Pop",
-              releaseDate: Date(),
-              trackTimeMillis: 157705),
-        Track(trackName: "Sour Candy",
-              artistName: "Lady Gaga & BLACKPINK",
-              artworkUrl100: URL(string: "https://is5-ssl.mzstatic.com/image/thumb/Music115/v4/5d/4d/f9/5d4df96a-e95e-2fe9-404a-5d570513762d/20UMGIM15390.rgb.jpg/100x100bb.jpg")!,
-              collectionName: "The Album",
-              primaryGenreName: "K-Pop",
-               releaseDate: Date(),
-               trackTimeMillis: 157705),
-        Track(trackName: "WHISTLE",
-              artistName: "BLACKPINK",
-              artworkUrl100: URL(string: "https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/89/eb/82/89eb82a7-52ec-9e02-87e9-fcc0ac7e0377/BLACKPINK_SQUARE2-1.jpg/100x100bb.jpg")!,
-              collectionName: "The Album",
-              primaryGenreName: "K-Pop",
-               releaseDate: Date(),
-               trackTimeMillis: 157705)
+    static var mockMovies: [Movies]  = [
+        Movies(original_title: "Wonka",
+               overview: "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
+               poster_path: URL(string:"https://m.media-amazon.com/images/M/MV5BNzJiZGRkMDgtZWFlOS00MWRhLThhNTEtMjljZTJjYTljYTBjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg")!,
+             details: "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
+               popularity: 2244.452,
+              release_Date: Date()),
+        Movies(original_title: "Aquaman and the Lost Kingdom",
+               overview: "Black Manta seeks revenge on Aquaman for his father's death. Wielding the Black Trident's power, he becomes a formidable foe. To defend Atlantis, Aquaman forges an alliance with his imprisoned brother. They must protect the kingdom.",
+               poster_path: URL(string: "https://m.media-amazon.com/images/M/MV5BMTkxM2FiYjctYjliYy00NjY2LWFmOTEtMWZiYWRjNjA4MGYxXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg")!,
+              details: "Black Manta seeks revenge on Aquaman for his father's death. Wielding the Black Trident's power, he becomes a formidable foe. To defend Atlantis, Aquaman forges an alliance with his imprisoned brother. They must protect the kingdom.",
+               popularity: 1831.771,
+               release_Date: Date()),
+        Movies(original_title: "The Beekeeper",
+               overview: "One man’s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
+               poster_path: URL(string: "https://m.media-amazon.com/images/M/MV5BZjQwYjU3OTYtMWVhMi00N2Y2LWEzMDgtMzViN2U4NWI1NmI3XkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_FMjpg_UX1000_.jpg")!,
+              details: "One man’s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
+               popularity: 2486.901,
+               release_Date: Date()),
+        Movies(original_title: "Migration",
+               overview: "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
+               poster_path: URL(string: "https://m.media-amazon.com/images/M/MV5BYTIxZDM5YWItM2Y1My00ODg5LTkzNjAtMWFlZTNlODg0MzEyXkEyXkFqcGdeQXVyMTA5ODEyNTc5._V1_FMjpg_UX1000_.jpg")!,
+              details: "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
+               popularity: 1736.027,
+               release_Date: Date()),
+        Movies(original_title: "Badland Hunters",
+               overview: "After a deadly earthquake turns Seoul into a lawless badland, a fearless huntsman springs into action to rescue a teenager abducted by a mad doctor.",
+               poster_path: URL(string: "https://m.media-amazon.com/images/M/MV5BODZiMmM2ZDctYmFjNi00ZDczLTlhMzAtMDBiMzY1MTRlOGFkXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg")!,
+              details: "After a deadly earthquake turns Seoul into a lawless badland, a fearless huntsman springs into action to rescue a teenager abducted by a mad doctor.",
+               popularity: 1704.65,
+               release_Date: Date())
     ]
     // We can now access this array of mock tracks anywhere like this:
     // let tracks = Tracks.mockTracks
