@@ -13,11 +13,12 @@
 		CB7254E62939D37800F531FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7254E42939D37800F531FB /* Main.storyboard */; };
 		CB7254E82939D37A00F531FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7254E72939D37A00F531FB /* Assets.xcassets */; };
 		CB7254EB2939D37A00F531FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7254E92939D37A00F531FB /* LaunchScreen.storyboard */; };
-		CB7254F6293B224000F531FB /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7254F5293B224000F531FB /* Movies.swift */; };
+		CB7254F6293B224000F531FB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7254F5293B224000F531FB /* Movie.swift */; };
 		CB7254FF293B610C00F531FB /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = CB7254FE293B610C00F531FB /* Nuke */; };
 		CB8B1547293EFCA100397B69 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B1546293EFCA100397B69 /* DetailViewController.swift */; };
 		F48EC9A72B675D5000C2FF60 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = F48EC9A62B675D5000C2FF60 /* Nuke */; };
 		F48EC9A92B676B7900C2FF60 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48EC9A82B676B7900C2FF60 /* TrackCell.swift */; };
+		F4E0E0E12B7AC55F007FD306 /* PostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E0E0E02B7AC55F007FD306 /* PostersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +30,10 @@
 		CB7254E72939D37A00F531FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB7254EA2939D37A00F531FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB7254EC2939D37A00F531FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB7254F5293B224000F531FB /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		CB7254F5293B224000F531FB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CB8B1546293EFCA100397B69 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F48EC9A82B676B7900C2FF60 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		F4E0E0E02B7AC55F007FD306 /* PostersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				CB7254F7293B224F00F531FB /* Models */,
-				CB7254E22939D37800F531FB /* MoviesViewController.swift */,
 				F48EC9A82B676B7900C2FF60 /* TrackCell.swift */,
+				F4E0E0E02B7AC55F007FD306 /* PostersViewController.swift */,
+				CB7254E22939D37800F531FB /* MoviesViewController.swift */,
 				CB8B1546293EFCA100397B69 /* DetailViewController.swift */,
 				CB7254DE2939D37800F531FB /* AppDelegate.swift */,
 				CB7254E02939D37800F531FB /* SceneDelegate.swift */,
@@ -83,7 +86,7 @@
 		CB7254F7293B224F00F531FB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CB7254F5293B224000F531FB /* Movies.swift */,
+				CB7254F5293B224000F531FB /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,7 +173,8 @@
 				CB7254DF2939D37800F531FB /* AppDelegate.swift in Sources */,
 				CB8B1547293EFCA100397B69 /* DetailViewController.swift in Sources */,
 				CB7254E12939D37800F531FB /* SceneDelegate.swift in Sources */,
-				CB7254F6293B224000F531FB /* Movies.swift in Sources */,
+				CB7254F6293B224000F531FB /* Movie.swift in Sources */,
+				F4E0E0E12B7AC55F007FD306 /* PostersViewController.swift in Sources */,
 				F48EC9A92B676B7900C2FF60 /* TrackCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +327,7 @@
 				DEVELOPMENT_TEAM = MA6H73S726;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "lab-tunley/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Flixter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -351,6 +356,7 @@
 				DEVELOPMENT_TEAM = MA6H73S726;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "lab-tunley/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Flixter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

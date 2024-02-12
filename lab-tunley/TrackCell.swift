@@ -3,7 +3,7 @@
 import UIKit
 import Nuke
 
-class MovieCell: UITableViewCell {
+class TrackCell: UITableViewCell {
     
     
     @IBOutlet weak var overview: UILabel!

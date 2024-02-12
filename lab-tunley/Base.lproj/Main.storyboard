@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Bz-nf-Bpi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qu8-ZK-hr3">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,13 +12,13 @@
         <!--Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TracksViewController" customModule="lab_tunley" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MoviesViewController" customModule="lab_tunley" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q6D-fR-GNG">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <imageView key="tableFooterView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="XfJ-jy-nZy">
                                     <rect key="frame" x="0.0" y="238" width="393" height="44"/>
@@ -74,9 +74,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="original_title" destination="tCN-bv-DtR" id="rLk-e1-ysi"/>
-                                            <outlet property="overview" destination="1Ce-xv-YW8" id="iDJ-5Z-PsI"/>
-                                            <outlet property="poster_path" destination="c4p-Tc-eKa" id="mxf-Ty-vDb"/>
+                                            <outlet property="original_title" destination="tCN-bv-DtR" id="vPl-uX-rRP"/>
+                                            <outlet property="overview" destination="1Ce-xv-YW8" id="TYs-Gz-arI"/>
+                                            <outlet property="poster_path" destination="c4p-Tc-eKa" id="pz1-y7-uW7"/>
                                             <segue destination="WgW-3b-CZ7" kind="show" id="wu0-h9-vUX"/>
                                         </connections>
                                     </tableViewCell>
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2858.7786259541986" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="3785.4961832061067" y="3.5211267605633805"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="bFl-ES-Qfi">
@@ -113,7 +113,7 @@
                                 <rect key="frame" x="24" y="119" width="345" height="252.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nVr-Pz-D41">
-                                        <rect key="frame" x="0.0" y="0.0" width="263.33333333333331" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="294.33333333333331" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mpr-re-4iS">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -122,8 +122,8 @@
                                                     <constraint firstAttribute="width" constant="100" id="HeH-da-JI0"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ice Cream" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDS-oS-QOh">
-                                                <rect key="frame" x="116.00000000000001" y="29.666666666666654" width="147.33333333333337" height="40.666666666666657"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="original_title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDS-oS-QOh">
+                                                <rect key="frame" x="116.00000000000001" y="29.666666666666654" width="178.33333333333337" height="40.666666666666657"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -131,7 +131,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gbD-0v-hcS">
-                                        <rect key="frame" x="0.0" y="124.00000000000001" width="277.66666666666669" height="54.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="124.00000000000001" width="109" height="54.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18V-90-Rj8">
                                                 <rect key="frame" x="0.0" y="0.0" width="76.333333333333329" height="20.333333333333332"/>
@@ -139,8 +139,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLACKPINK &amp; Selena Gomez" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozz-WL-4xL">
-                                                <rect key="frame" x="0.0" y="28.333333333333314" width="277.66666666666669" height="26.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozz-WL-4xL">
+                                                <rect key="frame" x="0.0" y="28.333333333333314" width="109" height="26.333333333333329"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -171,12 +171,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hm6-RZ-mgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3677.0992366412211" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="4603.8167938931292" y="3.5211267605633805"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Posters-->
+        <scene sceneID="Nu1-Mo-z6H">
+            <objects>
+                <viewController id="lUT-Hj-EfF" customClass="PostersViewController" customModule="lab_tunley" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0RJ-xI-sbY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Mwl-rL-4Jb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Posters" id="Swo-eC-fBW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yX-g3-x7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6019" y="29"/>
+        </scene>
+        <!--Now Playing-->
         <scene sceneID="bqd-9T-Z20">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Bz-nf-Bpi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="movieclapper" catalog="system" id="Pjw-6t-Ljk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vO0-UA-Ac9">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -189,10 +206,50 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBr-Kk-EcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1932.06106870229" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2858.7786259541986" y="3.5211267605633805"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gEq-hA-d6h">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qu8-ZK-hr3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dxM-nZ-cWb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0Bz-nf-Bpi" kind="relationship" relationship="viewControllers" id="MLc-my-lBJ"/>
+                        <segue destination="1jp-LC-Mfa" kind="relationship" relationship="viewControllers" id="glf-tA-Igf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlA-yq-o3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2160" y="4"/>
+        </scene>
+        <!--Posters-->
+        <scene sceneID="7p2-vS-b4M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jp-LC-Mfa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Posters" image="movieclapper.fill" catalog="system" id="meM-Dh-Oa9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kGc-DM-2MN">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lUT-Hj-EfF" kind="relationship" relationship="rootViewController" id="jw7-H3-977"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFY-Ei-moX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5319.8473282442746" y="14.788732394366198"/>
         </scene>
     </scenes>
     <resources>
+        <image name="movieclapper" catalog="system" width="128" height="113"/>
+        <image name="movieclapper.fill" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
