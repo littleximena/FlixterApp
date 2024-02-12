@@ -1,6 +1,8 @@
 import Foundation
 
 // TODO: Pt 1 - Create a Track model struct
+
+
 struct Movies {
     let original_title: String
     let overview: String
@@ -8,8 +10,9 @@ struct Movies {
     
     // Detail properties
     let details: String
-    let popularity: Double
-    let release_Date: Date}
+    //let popularity: Double
+    //let release_Date: Date
+}
 // TODO: Pt 1 - Create an extension with a mock tracks static var
 extension Movies {
 

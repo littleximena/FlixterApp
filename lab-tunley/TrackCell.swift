@@ -1,15 +1,17 @@
-//
-//  TrackCell.swift
-//  lab-tunley
-//
-//  Created by Ximena on 1/29/24.
-//
+
 
 import UIKit
 import Nuke
 
-class TrackCell: UITableViewCell {
-
+class MovieCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var overview: UILabel!
+    
+    @IBOutlet weak var poster_path: UIImageView!
+    @IBOutlet weak var original_title: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,17 +23,15 @@ class TrackCell: UITableViewCell {
         // Configure the view for the selected state
         
     }
-    @IBOutlet weak var poster_path: UIImageView!
-    @IBOutlet weak var overview: UILabel!
-    @IBOutlet weak var original_title: UILabel!
+
     
     /// Configures the cell's UI for the given track.
-    func configure(with movies: Movies) {
-        original_title.text = movies.original_title
-        overview.text = movies.overview
+    func configure(with movie: Movie) {
+        original_title.text = movie.original_title
+        overview.text = movie.overview
 
         // Load image async via Nuke library image loading helper method
-        Nuke.loadImage(with: movies.poster_path, into: poster_path)
+        Nuke.loadImage(with: movie.poster_path, into: poster_path)
     }
     
 }
