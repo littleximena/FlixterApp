@@ -29,15 +29,15 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
            return cell
     }
     
-    @IBOutlet weak var posterView: UICollectionView!
+    @IBOutlet weak var postersView: UICollectionView!
     
     var posters: [Poster] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        posterView.dataSource = self         // Create a search URL for fetching albums (`entity=album`)
-        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=1eccfd065bf0df5e140f04a8778730f2")!
+        postersView.dataSource = self         // Create a search URL for fetching albums (`entity=album`)
+        let url = URL(string: "https://image.tmdb.org/t/p/w500/{posterPath}")!
         let request = URLRequest(url: url)
 
         let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
@@ -63,7 +63,7 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
                 DispatchQueue.main.async {
                     self?.posters = posters
                     
-                    self?.posterView.reloadData()
+                    self?.postersView.reloadData()
                 }
             } catch {
                 print(error.localizedDescription)
@@ -76,7 +76,7 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
         // Get a reference to the collection view's layout
         // We want to dynamically size the cells for the available space and desired number of columns.
         // NOTE: This collection view scrolls vertically, but collection views can alternatively scroll horizontally.
-        let layout = posterView.collectionViewLayout as! UICollectionViewFlowLayout
+        let layout = postersView.collectionViewLayout as! UICollectionViewFlowLayout
 
         // The minimum spacing between adjacent cells (left / right, in vertical scrolling collection)
         // Set this to taste.
@@ -90,7 +90,7 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
         let numberOfColumns: CGFloat = 3
 
         // Calculate the width each cell need to be to fit the number of columns, taking into account the spacing between cells.
-        let width = (posterView.bounds.width - layout.minimumInteritemSpacing * (numberOfColumns - 1)) / numberOfColumns
+        let width = (postersView.bounds.width - layout.minimumInteritemSpacing * (numberOfColumns - 1)) / numberOfColumns
 
         // Set the size that each tem/cell should display at
         layout.itemSize = CGSize(width: width, height: width)

@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
         
         // Set labels with the associated track values.
         original_title.text = movie.original_title
-        details.text = movie.details
+        //details.text = movie.details
         
         // Create a date formatter to style our date and convert it to a string
         

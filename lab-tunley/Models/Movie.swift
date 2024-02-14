@@ -13,7 +13,7 @@ struct Movie: Decodable {
     let poster_path: URL
     
     // Detail properties
-    let details: String
+    //let details: String
     //let popularity: Double
     //let release_Date: Date
 }
