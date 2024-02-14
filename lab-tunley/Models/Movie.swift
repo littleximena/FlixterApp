@@ -10,7 +10,7 @@ struct MoviesResponse: Decodable {
 struct Movie: Decodable {
     let original_title: String
     let overview: String
-    let poster_path: URL
+    let poster_path: String
     
     // Detail properties
     //let details: String

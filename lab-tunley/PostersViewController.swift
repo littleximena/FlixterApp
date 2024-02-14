@@ -18,13 +18,13 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
 
            // Use the indexPath.item to index into the albums array to get the corresponding album
-           let posters = posters[indexPath.item]
+           let poster = posters[indexPath.item]
 
            // Get the artwork image url
-           let imageUrl = posters.poster_path
+        let posterURL = URL(string:"https://image.tmdb.org/t/p/w500\(poster.poster_path)")!
 
            // Set the image on the image view of the cell
-           Nuke.loadImage(with: imageUrl, into: cell.posterImageView)
+           Nuke.loadImage(with: posterURL, into: cell.posterImageView)
 
            return cell
     }
@@ -37,7 +37,7 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
         super.viewDidLoad()
         
         postersView.dataSource = self         // Create a search URL for fetching albums (`entity=album`)
-        let url = URL(string: "https://image.tmdb.org/t/p/w500/{posterPath}")!
+        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=1eccfd065bf0df5e140f04a8778730f2")!
         let request = URLRequest(url: url)
 
         let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in

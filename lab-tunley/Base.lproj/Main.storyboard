@@ -165,8 +165,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="VcV-pv-bNh"/>
                     <connections>
-                        <outlet property="details" destination="ozz-WL-4xL" id="f8R-aD-8Hh"/>
                         <outlet property="original_title" destination="oDS-oS-QOh" id="tEX-qG-cyV"/>
+                        <outlet property="overview" destination="ozz-WL-4xL" id="Iya-NP-eXw"/>
                         <outlet property="poster_path" destination="Mpr-re-4iS" id="3x4-yy-rUC"/>
                     </connections>
                 </viewController>
