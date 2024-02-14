@@ -1,3 +1,59 @@
+# Project 3 - *Flixster*
+
+Submitted by: **Ximena Fernandez**
+
+**Flixter** is an app that introduces networking API Calls to a movie database to receive a list of movies that are Now Playing and includes a Collection Album View
+
+Time spent: **20** hours spent in total
+
+## Required Features
+
+The following **required** functionality is completed:
+
+- [X] Implement network call and table view to display a list of movies currently playing (title, description, image)
+- [X] App has a collection view with the same list of movies
+- [X] Uses a tab bar controller to switch between collection view and table view screens
+ 
+The following **optional** features are implemented:
+
+- [ ] Make an additional network call to another end-point.	
+- [X] Allow users to scroll when context items are off-screen (table view implemention)
+
+The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app functionality!
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+<div>
+    <a href="https://www.loom.com/share/7942311aab4b4bf59e081da69429df44">
+      <p>Simulator - iPhone 15 Pro - 13 February 2024 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/7942311aab4b4bf59e081da69429df44">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/7942311aab4b4bf59e081da69429df44-with-play.gif">
+    </a>
+  </div>
+## Notes
+
+I could not load the poster view method but reached out to Slack, Wilmer Barrios was a great help in showing me what I was doing that was incorrect. 
+
+## License
+
+    Copyright [yyyy] [name of copyright owner]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
 # Project 2 - Flixter
 
 Submitted by: Ximena Fernandez
